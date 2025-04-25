@@ -1,40 +1,41 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Simulasi Cicilan - Mitsubishi Jambi</title>
+  <title>Simulasi Cicilan – Mitsubishi Jambi</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
-    <div class="container header__inner">
+    <div class="container header-inner">
       <a href="index.html" class="logo">Mitsubishi Jambi</a>
       <button class="nav-toggle"><span class="hamburger"></span></button>
       <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Home</a></li>
-          <li><a href="products.html" class="nav__link">Produk</a></li>
-          <li><a href="simulasi.html" class="nav__link active">Simulasi</a></li>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Produk</a></li>
+          <li><a href="simulasi.html" class="nav-link active">Simulasi</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="section simulasi">
+  <section class="simulasi section">
     <div class="container">
-      <h2 class="section__title">Simulasi Cicilan</h2>
+      <h2 class="section-title">Simulasi Cicilan</h2>
       <form id="simulasiForm" class="form">
         <input id="harga" type="number" placeholder="Harga Mobil (juta)" required>
         <input id="uangmuka" type="number" placeholder="Uang Muka (%)" required>
         <input id="tenor" type="number" placeholder="Tenor (bulan)" required>
-        <button type="submit" class="btn btn--primary">Hitung Cicilan</button>
+        <button type="submit" class="btn btn-primary">Hitung Cicilan</button>
       </form>
-      <div id="result" class="simulasi__result"></div>
+      <div id="result" class="simulasi-result"></div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="container footer-inner">
       <p>&copy; 2025 Mitsubishi Jambi. All rights reserved.</p>
     </div>
   </footer>
