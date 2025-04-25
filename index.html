@@ -1,16 +1,17 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mitsubishi Jambi - Beranda</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="top">
-  <!-- Modern Header -->
+<body>
+  <!-- Header -->
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">🚗 Mitsubishi Jambi</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <a href="index.html" class="logo">Mitsubishi Jambi</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
         <span class="hamburger"></span>
       </button>
       <nav class="nav">
@@ -18,96 +19,104 @@
           <li><a href="#top" class="nav__link">Home</a></li>
           <li><a href="products.html" class="nav__link">Produk</a></li>
           <li><a href="simulasi.html" class="nav__link">Simulasi</a></li>
-          <li><a href="#contact" class="nav__link">Contact</a></li>
+          <li><a href="#contact" class="nav__link">Kontak</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero -->
+  <section id="top" class="hero">
     <div class="hero__overlay">
       <div class="container hero__content">
-        <h1 class="hero__title">Mobil Mitsubishi Terbaik di Jambi</h1>
-        <p class="hero__subtitle">Pilihan lengkap, harga OTR kompetitif, layanan profesional.</p>
+        <h1 class="hero__title">Mitsubishi Terbaik di Jambi</h1>
+        <p class="hero__subtitle">Pilihan SUV, Sedan, Truck dengan harga OTR kompetitif</p>
         <a href="products.html" class="btn btn--primary">Lihat Produk</a>
       </div>
     </div>
   </section>
 
-  <!-- Home Content: Fitur, Testimonial, CTA -->
+  <!-- Features -->
   <section class="section features">
     <div class="container">
-      <h2 class="section__title">Kenapa Pilih Kami?</h2>
+      <h2 class="section__title">Kenapa Pilih Mitsubishi Jambi?</h2>
       <div class="features__grid">
         <div class="feature">
-          <img src="images/icon-service.svg" alt="Service">
-          <h3>Pelayanan Profesional</h3>
-          <p>Tim sales berpengalaman siap membantu hingga proses selesai.</p>
+          <img src="images/icon-service.svg" alt="Pelayanan">
+          <h3>Pelayanan Cepat</h3>
+          <p>Tim sales profesional siap proses cepat tanpa ribet.</p>
         </div>
         <div class="feature">
-          <img src="images/icon-price.svg" alt="Price">
+          <img src="images/icon-price.svg" alt="Harga Transparan">
           <h3>Harga Transparan</h3>
-          <p>Detail OTR dan biaya tambahan dijelaskan jelas tanpa biaya tersembunyi.</p>
+          <p>Detail OTR jelas, tanpa biaya tersembunyi.</p>
         </div>
         <div class="feature">
-          <img src="images/icon-support.svg" alt="Support">
-          <h3>Dukungan Purna Jual</h3>
-          <p>Layanan aftersales dan garansi resmi Mitsubishi.</p>
+          <img src="images/icon-support.svg" alt="Dukungan">
+          <h3>After Sales</h3>
+          <p>Layanan purna jual dan garansi resmi Mitsubishi.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Testimonial -->
   <section class="section testimonial">
     <div class="container">
-      <h2 class="section__title">Testimonial</h2>
+      <h2 class="section__title">Apa Kata Pelanggan</h2>
       <div class="testimonial__slider">
-        <blockquote>
-          "Pelayanan cepat dan ramah, mobil baru saya sempurna!"
-          <cite>- Andi, Pelanggan</cite>
+        <blockquote class="testimonial__item">
+          "Proses pembelian sangat mudah, recommended!"
+          <cite>- Andi S.</cite>
         </blockquote>
-        <blockquote>
-          "Harga bersaing dan proses mudah, rekomendasi terbaik di Jambi."
-          <cite>- Budi, Pelanggan</cite>
+        <blockquote class="testimonial__item">
+          "Harga bersaing dan pelayanan ramah."
+          <cite>- Budi T.</cite>
         </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="section about">
     <div class="container about__inner">
-      <div class="about__image">
-        <img src="images/lisa.jpg" alt="Lisa Suryani Purba">
-      </div>
-      <div class="about__content">
+      <img class="about__img" src="images/lisa.jpg" alt="Lisa Suryani Purba">
+      <div class="about__text">
         <h2>Lisa Suryani Purba</h2>
-        <p>Sales Counter Resmi Mitsubishi Jambi, 10+ tahun pengalaman memastikan Anda mendapatkan penawaran terbaik.</p>
-        <a href="https://wa.me/6282173541831" target="_blank" class="btn btn--secondary">Chat WhatsApp</a>
+        <p>Sales counter resmi dengan pengalaman 10+ tahun. Hubungi saya untuk konsultasi dan penawaran terbaik.</p>
+        <a href="https://wa.me/6282173541831" class="btn btn--secondary">Chat WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="section contact">
     <div class="container">
       <h2 class="section__title">Hubungi Kami</h2>
       <form class="form">
-        <!-- form fields -->
+        <input type="text" placeholder="Nama" required>
+        <input type="tel" placeholder="No. Telepon" required>
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Pesan Anda"></textarea>
+        <button type="submit" class="btn btn--primary">Kirim</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer & WhatsApp -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; 2025 Mitsubishi Jambi.</p>
-      <div class="social"><a href="#">FB</a><a href="#">IG</a></div>
+      <p>&copy; 2025 Mitsubishi Jambi. All rights reserved.</p>
+      <div class="social">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+      </div>
     </div>
   </footer>
+
+  <!-- WhatsApp Button -->
   <a href="https://wa.me/6282173541831" class="whatsapp-btn">💬</a>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
