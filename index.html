@@ -1,81 +1,120 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Mitsubishi Jambi - Beranda</title>
+  <title>Mitsubishi Jambi – Beranda</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header class="header">
-    <div class="container header__inner">
+    <div class="container header-inner">
       <a href="index.html" class="logo">Mitsubishi Jambi</a>
       <button class="nav-toggle" aria-label="Toggle menu"><span class="hamburger"></span></button>
       <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="#top" class="nav__link">Home</a></li>
-          <li><a href="products.html" class="nav__link">Produk</a></li>
-          <li><a href="simulasi.html" class="nav__link">Simulasi</a></li>
-          <li><a href="#contact" class="nav__link">Kontak</a></li>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Produk</a></li>
+          <li><a href="simulasi.html" class="nav-link">Simulasi</a></li>
+          <li><a href="#contact" class="nav-link">Kontak</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="top" class="hero">
-    <div class="hero__overlay">
-      <div class="container hero__content">
-        <h1 class="hero__title">Mitsubishi Terbaik di Jambi</h1>
-        <p class="hero__subtitle">Pilihan SUV, Sedan, Truck dengan harga OTR kompetitif</p>
-        <a href="products.html" class="btn btn--primary">Lihat Produk</a>
-      </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Mitsubishi Terbaik di Jambi</h1>
+      <p>Pilihan SUV, Sedan & Truck dengan harga OTR kompetitif.</p>
+      <a href="products.html" class="btn btn-primary">Lihat Produk</a>
     </div>
   </section>
 
-  <section class="section features">
+  <!-- Features -->
+  <section class="features section">
     <div class="container">
-      <h2 class="section__title">Kenapa Pilih Mitsubishi Jambi?</h2>
-      <div class="features__grid">
-        <!-- ... fitur ... -->
+      <h2 class="section-title">Kenapa Pilih Kami?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <img src="images/icon-service.svg" alt="">
+          <h3>Pelayanan Cepat</h3>
+          <p>Tim profesional siap membantu tanpa ribet.</p>
+        </div>
+        <div class="feature">
+          <img src="images/icon-price.svg" alt="">
+          <h3>Harga Transparan</h3>
+          <p>OTR dan biaya jelas, tanpa biaya tersembunyi.</p>
+        </div>
+        <div class="feature">
+          <img src="images/icon-support.svg" alt="">
+          <h3>After Sales</h3>
+          <p>Layanan purna jual & garansi resmi.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section testimonial">
+  <!-- Testimonial -->
+  <section class="testimonial section">
     <div class="container">
-      <h2 class="section__title">Apa Kata Pelanggan</h2>
-      <div class="testimonial__slider">
-        <!-- ... testimonial ... -->
+      <h2 class="section-title">Apa Kata Pelanggan</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial-item">
+          <p>“Proses mudah dan cepat!”</p>
+          <cite>- Andi S.</cite>
+        </div>
+        <div class="testimonial-item">
+          <p>“Harga kompetitif, sangat puas.”</p>
+          <cite>- Budi T.</cite>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section about">
-    <div class="container about__inner">
-      <img class="about__img" src="images/lisa.jpg" alt="Lisa">
-      <div class="about__text">
+  <!-- About -->
+  <section id="about" class="about section">
+    <div class="container about-inner">
+      <img class="about-img" src="images/lisa.jpg" alt="Lisa Suryani Purba">
+      <div class="about-text">
         <h2>Lisa Suryani Purba</h2>
-        <p>Sales counter resmi dengan pengalaman 10+ tahun.</p>
-        <a href="https://wa.me/6282173541831" class="btn btn--secondary">Chat WhatsApp</a>
+        <p>Sales counter resmi Mitsubishi Jambi dengan pengalaman 10+ tahun.</p>
+        <a href="https://wa.me/6282173541831" class="btn btn-secondary">Chat WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section contact">
+  <!-- Contact -->
+  <section id="contact" class="contact section">
     <div class="container">
-      <h2 class="section__title">Hubungi Kami</h2>
+      <h2 class="section-title">Hubungi Kami</h2>
       <form class="form">
-        <!-- form fields -->
+        <input type="text" placeholder="Nama" required>
+        <input type="tel" placeholder="No. Telepon" required>
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Pesan Anda"></textarea>
+        <button type="submit" class="btn btn-primary">Kirim</button>
       </form>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="container footer-inner">
       <p>&copy; 2025 Mitsubishi Jambi. All rights reserved.</p>
+      <div class="social">
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+      </div>
     </div>
   </footer>
 
+  <!-- WhatsApp Floating -->
   <a href="https://wa.me/6282173541831" class="whatsapp-btn">💬</a>
+
   <script src="script.js"></script>
 </body>
 </html>
