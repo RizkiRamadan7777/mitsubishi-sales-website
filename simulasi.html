@@ -1,20 +1,20 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Simulasi Cicilan - Mitsubishi Jambi</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">Mitsubishi</a>
+      <a href="index.html" class="logo">Mitsubishi Jambi</a>
+      <button class="nav-toggle"><span class="hamburger"></span></button>
       <nav class="nav">
         <ul class="nav__list">
           <li><a href="index.html" class="nav__link">Home</a></li>
           <li><a href="products.html" class="nav__link">Produk</a></li>
-          <li><a href="simulasi.html" class="nav__link active">Simulasi Cicilan</a></li>
+          <li><a href="simulasi.html" class="nav__link active">Simulasi</a></li>
         </ul>
       </nav>
     </div>
@@ -24,18 +24,9 @@
     <div class="container">
       <h2 class="section__title">Simulasi Cicilan</h2>
       <form id="simulasiForm" class="form">
-        <div class="form__group">
-          <label for="harga">Harga Mobil (juta)</label>
-          <input id="harga" type="number" required>
-        </div>
-        <div class="form__group">
-          <label for="uangmuka">Uang Muka (%)</label>
-          <input id="uangmuka" type="number" required>
-        </div>
-        <div class="form__group">
-          <label for="tenor">Tenor (bulan)</label>
-          <input id="tenor" type="number" required>
-        </div>
+        <input id="harga" type="number" placeholder="Harga Mobil (juta)" required>
+        <input id="uangmuka" type="number" placeholder="Uang Muka (%)" required>
+        <input id="tenor" type="number" placeholder="Tenor (bulan)" required>
         <button type="submit" class="btn btn--primary">Hitung Cicilan</button>
       </form>
       <div id="result" class="simulasi__result"></div>
@@ -48,6 +39,7 @@
     </div>
   </footer>
 
-  <script src="simulasi.js" defer></script>
+  <script src="script.js"></script>
+  <script src="simulasi.js"></script>
 </body>
 </html>
