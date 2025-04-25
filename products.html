@@ -1,20 +1,21 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mitsubishi Jambi - Produk</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">Mitsubishi</a>
-      <nav class="nav">
+      <a href="index.html" class="logo">Mitsubishi Jambi</a>
+      <button class="nav-toggle"><span class="hamburger"></span></button>
+      <nav class="nav open">
         <ul class="nav__list">
           <li><a href="index.html" class="nav__link">Home</a></li>
           <li><a href="products.html" class="nav__link active">Produk</a></li>
-          <li><a href="simulasi.html" class="nav__link">Simulasi Cicilan</a></li>
+          <li><a href="simulasi.html" class="nav__link">Simulasi</a></li>
+          <li><a href="#contact" class="nav__link">Kontak</a></li>
         </ul>
       </nav>
     </div>
@@ -39,24 +40,12 @@
         </select>
       </div>
       <div id="cards" class="cards">
-        <!-- SUV -->
         <div class="card" data-name="Xpander Cross" data-price="326.5" data-category="suv">
           <img src="images/suv-xpander.jpg" alt="Xpander Cross">
           <h3>Xpander Cross</h3>
           <p>Rp 326,5 juta</p>
         </div>
-        <!-- Sedan -->
-        <div class="card" data-name="Eclipse Cross" data-price="509" data-category="sedan">
-          <img src="images/sedan-eclipse.jpg" alt="Eclipse Cross">
-          <h3>Eclipse Cross</h3>
-          <p>Rp 509 juta</p>
-        </div>
-        <!-- Truck -->
-        <div class="card" data-name="New Triton" data-price="433" data-category="truck">
-          <img src="images/truck-triton.jpg" alt="New Triton">
-          <h3>New Triton</h3>
-          <p>Rp 433 juta</p>
-        </div>
+        <!-- Tambahkan kartu lain... -->
       </div>
     </div>
   </section>
@@ -67,6 +56,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
