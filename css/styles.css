@@ -1,0 +1,43 @@
+:root {
+  --red: #e60012;
+  --black: #000;
+  --white: #fff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: sans-serif; color: var(--black); }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--black); }
+.navbar .logo { color: var(--white); text-decoration: none; font-size: 1.5rem; }
+.nav-links li { list-style: none; display: inline; margin-left: 1rem; }
+.nav-links a { color: var(--white); text-decoration: none; }
+.btn-cta { display: inline-block; background: var(--red); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; }
+.whatsapp-float { position: fixed; bottom: 1rem; right: 1rem; width: 3.5rem; height: 3.5rem; }
+
+/* Hero */
+.hero { text-align: center; padding: 4rem 1rem; background: #f5f5f5; }
+.hero h1 { margin-bottom: 0.5rem; }
+
+/* Promo Slider */
+.promo { padding: 2rem 1rem; text-align: center; }
+.promo-slider { display: flex; overflow-x: auto; gap: 1rem; }
+.promo-slider img { width: 300px; height: auto; border-radius: 0.5rem; }
+
+/* Featured Products */
+.featured-products { padding: 2rem 1rem; }
+.featured-products .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.featured-products .product-item { border: 1px solid #ddd; padding: 1rem; border-radius: 0.5rem; text-align: center; }
+
+/* Testimonials */
+.testimonials { padding: 2rem 1rem; background: #f9f9f9; }
+.testimonials .testi-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.testimonials .testi-item { padding: 1rem; border-radius: 0.5rem; background: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.testimonials .testi-item p { font-style: italic; margin-bottom: 0.5rem; }
+
+/* Map */
+.showroom-map { padding: 2rem 1rem; }
+
+/* Produk Page */
+.filters { display: flex; gap: 0.5rem; padding: 1rem; }
+.filter-btn { background: var(--red); color: var(--white); border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; }
+.filter-btn:hover { opacity: 0.9; }
+.product-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; padding: 1rem; }
+.product-item { border: 1px solid #ddd; padding: 1rem; border-radius: 0.5rem; text-align: center; }
