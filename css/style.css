@@ -1,0 +1,108 @@
+:root {
+    --primary-red: #E4002B;
+    --cyber-gradient: linear-gradient(45deg, #E4002B 0%, #000000 100%);
+    --neon-shadow: 0 0 15px var(--primary-red);
+    --hologram-effect: linear-gradient(
+        45deg,
+        #E4002B 25%,
+        #FFFFFF 50%,
+        #E4002B 75%
+    );
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Cyber', sans-serif;
+}
+
+/* Hologram Text Effect */
+.hologram-text {
+    background: var(--hologram-effect);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hologram 3s linear infinite;
+}
+
+@keyframes hologram {
+    to { background-position: 200% center; }
+}
+
+/* 3D Button Effect */
+.cta-hover {
+    position: relative;
+    background: var(--cyber-gradient);
+    border: 2px solid var(--primary-red);
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform-style: preserve-3d;
+}
+
+.cta-hover::before {
+    content: attr(data-hover);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-1px);
+    transition: all 0.3s;
+}
+
+.cta-hover:hover {
+    transform: rotateX(15deg) rotateY(15deg);
+}
+
+/* Augmented Reality Button */
+.ar-btn {
+    background: rgba(228,0,43,0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--primary-red);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ar-btn:hover {
+    background: var(--primary-red);
+    box-shadow: var(--neon-shadow);
+}
+
+/* WebGL Container */
+#webgl-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* AI Chat Animation */
+.ai-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* 3D Car Customization */
+#3d-car-container {
+    width: 100%;
+    height: 70vh;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    margin: 2rem 0;
+}
