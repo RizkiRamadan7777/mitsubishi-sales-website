@@ -1,8 +1,8 @@
+// next.config.js
 module.exports = {
+  trailingSlash: true,
+  output: 'export', // Untuk static export
   images: {
-    domains: ['images.unsplash.com'],
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true, // Non-aktifkan optimisasi gambar jika perlu
   },
-  optimizeFonts: true,
-  compress: true,
 }
