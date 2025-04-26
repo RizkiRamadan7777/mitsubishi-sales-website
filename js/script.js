@@ -1,35 +1,59 @@
-// Simulasi Cicilan
-const form = document.getElementById('loan-form');
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const price = parseFloat(document.getElementById('price').value);
-    const dpPct = parseFloat(document.getElementById('dp').value);
-    const ratePct = parseFloat(document.getElementById('rate').value);
-    const term = parseInt(document.getElementById('term').value);
+// Promo Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const slideInterval = setInterval(nextSlide, 5000);
 
-    const dpAmount = price * (dpPct / 100);
-    const principal = price - dpAmount;
-    const monthlyRate = ratePct / 100 / 12;
-    const payment = (principal * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -term));
-
-    document.getElementById('result').innerText =
-      `Cicilan per bulan: Rp ${payment.toLocaleString('id-ID', { maximumFractionDigits: 0 })}`;
-  });
+function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
 }
 
-// Filter Produk
-const filterBtns = document.querySelectorAll('.filter-btn');
-const productItems = document.querySelectorAll('.product-item');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const cat = btn.dataset.cat;
-    productItems.forEach(item => {
-      if (cat === 'all' || item.classList.contains(cat)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
+// Product Filter
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const category = this.dataset.category;
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => 
+            btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter products
+        document.querySelectorAll('.product-item').forEach(item => {
+            if(category === 'all' || item.dataset.category === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
     });
-  });
+});
+
+// Simulasi Kredit
+function hitungCicilan() {
+    const harga = parseFloat(document.getElementById('harga').value);
+    const dp = parseFloat(document.getElementById('dp').value);
+    const tenor = parseInt(document.getElementById('tenor').value);
+    const bungaPerTahun = 0.08; // 8% per tahun
+    
+    const pokok = harga - dp;
+    const bungaTotal = pokok * bungaPerTahun * (tenor / 12);
+    const cicilanPerBulan = (pokok + bungaTotal) / tenor;
+    const totalPembayaran = dp + (cicilanPerBulan * tenor);
+    
+    document.getElementById('cicilan').textContent = 
+        `Rp ${cicilanPerBulan.toLocaleString('id-ID')}`;
+    document.getElementById('total').textContent = 
+        `Rp ${totalPembayaran.toLocaleString('id-ID')}`;
+}
+
+// WhatsApp Tracking
+document.querySelectorAll('[data-product]').forEach(button => {
+    button.addEventListener('click', function() {
+        const productName = this.dataset.product;
+        const message = `Halo Lisa, saya tertarik dengan mobil ${productName}. Bisa info lebih detail?`;
+        const whatsappUrl = `https://wa.me/6282173541831?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    });
 });
