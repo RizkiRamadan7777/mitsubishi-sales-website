@@ -7,41 +7,38 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
-    <nav class="navbar">
-      <div class="container">
-        <a href="index.html" class="logo">Mitsubishi Motors</a>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Mitsubishi Motors</a>
+      <nav>
         <ul class="nav-links">
           <li><a href="index.html" class="active">Beranda</a></li>
           <li><a href="produk.html">Produk</a></li>
           <li><a href="simulasi.html">Simulasi Cicilan</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <!-- Main Content -->
   <main>
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Selamat Datang di Mitsubishi Sales Jambi</h1>
-        <p>Dapatkan promo menarik dan layanan terbaik dari <strong>Lisa Suryani Purba</strong>.</p>
-        <a href="https://wa.me/6282173541831" class="btn-cta">Chat via WhatsApp</a>
+        <div class="hero-card">
+          <h1>Selamat Datang di Mitsubishi Sales Jambi</h1>
+          <p>Layanan premium oleh <strong>Lisa Suryani Purba</strong> untuk membantu Anda memiliki mobil impian.</p>
+          <a href="https://wa.me/6282173541831" class="btn-primary">Chat via WhatsApp</a>
+        </div>
       </div>
     </section>
 
     <!-- About Me -->
     <section class="about-me">
-      <div class="container about-content">
-        <div class="about-img">
+      <div class="container card-grid">
+        <div class="card about-card">
           <img src="assets/images/lisa.jpg" alt="Lisa Suryani Purba">
-        </div>
-        <div class="about-text">
           <h2>Tentang Saya</h2>
-          <p>Halo, saya <strong>Lisa Suryani Purba</strong>, Sales Counter Mitsubishi dengan pengalaman lebih dari 5 tahun di industri otomotif. Saya berdedikasi membantu Anda menemukan mobil impian sesuai kebutuhan dan budget.</p>
-          <p>Jangan ragu untuk menghubungi saya kapan saja melalui WhatsApp untuk konsultasi dan penawaran terbaik.</p>
+          <p>Halo, saya <strong>Lisa Suryani Purba</strong>, Sales Counter Mitsubishi dengan pengalaman 5+ tahun. Saya membantu Anda memilih mobil sesuai kebutuhan dan budget.</p>
         </div>
       </div>
     </section>
@@ -50,30 +47,30 @@
     <section class="promo">
       <div class="container">
         <h2>Promo Terbaru</h2>
-        <div class="promo-slider">
-          <img src="assets/images/promo1.jpg" alt="Promo 1">
-          <img src="assets/images/promo2.jpg" alt="Promo 2">
-          <img src="assets/images/promo3.jpg" alt="Promo 3">
+        <div class="promo-grid">
+          <div class="card promo-card"><img src="assets/images/promo1.jpg" alt="Promo 1"></div>
+          <div class="card promo-card"><img src="assets/images/promo2.jpg" alt="Promo 2"></div>
+          <div class="card promo-card"><img src="assets/images/promo3.jpg" alt="Promo 3"></div>
         </div>
       </div>
     </section>
 
-    <!-- Produk Unggulan -->
+    <!-- Featured Products -->
     <section class="featured-products">
       <div class="container">
         <h2>Produk Unggulan</h2>
-        <div class="products">
-          <div class="product-item">
+        <div class="card-grid">
+          <div class="card product-card">
             <img src="assets/images/suv1.jpg" alt="Model X">
             <h3>Model X</h3>
             <p>Rp 500.000.000</p>
           </div>
-          <div class="product-item">
+          <div class="card product-card">
             <img src="assets/images/sedan1.jpg" alt="Model Y">
             <h3>Model Y</h3>
             <p>Rp 450.000.000</p>
           </div>
-          <div class="product-item">
+          <div class="card product-card">
             <img src="assets/images/truck1.jpg" alt="Model Z">
             <h3>Model Z</h3>
             <p>Rp 600.000.000</p>
@@ -82,21 +79,21 @@
       </div>
     </section>
 
-    <!-- Testimoni -->
+    <!-- Testimonials -->
     <section class="testimonials">
       <div class="container">
         <h2>Testimoni Pelanggan</h2>
-        <div class="testi-cards">
-          <div class="testi-item">
-            <p>"Pelayanan cepat dan ramah!"</p>
+        <div class="card-grid">
+          <div class="card testi-card">
+            <p>“Pelayanan cepat dan profesional!”</p>
             <span>- Andi, Jambi</span>
           </div>
-          <div class="testi-item">
-            <p>"Promo menarik, harga sesuai!"</p>
+          <div class="card testi-card">
+            <p>“Harga terbaik dan support luar biasa.”</p>
             <span>- Budi, Jambi</span>
           </div>
-          <div class="testi-item">
-            <p>"Proses cukup mudah, recommended!"</p>
+          <div class="card testi-card">
+            <p>“Sangat dianjurkan untuk beli di sini.”</p>
             <span>- Citra, Palembang</span>
           </div>
         </div>
@@ -104,31 +101,27 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-info">
+    <div class="container footer-grid">
+      <div class="card footer-card">
         <h4>Kontak</h4>
         <p>Lisa Suryani Purba</p>
         <p>WA: <a href="https://wa.me/6282173541831">+62 821-7354-1831</a></p>
         <p>Email: <a href="mailto:info@mitsubishijambi.com">info@mitsubishijambi.com</a></p>
       </div>
-      <div class="footer-map">
-        <h4>Lokasi Showroom</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="200" height="150" style="border:0; border-radius:0.5rem;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <div class="footer-social">
+      <div class="card footer-card">
         <h4>Media Sosial</h4>
         <p><a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+      </div>
+      <div class="card footer-card footer-map-card">
+        <h4>Lokasi Showroom</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
     <p class="footer-copy">&copy; 2025 Mitsubishi Sales Jambi. All rights reserved.</p>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/6282173541831" class="whatsapp-float" target="_blank">
-    <img src="assets/whatsapp-icon.png" alt="Chat via WhatsApp" />
-  </a>
+  <a href="https://wa.me/6282173541831" class="whatsapp-float"><img src="assets/whatsapp-icon.png" alt="WhatsApp"></a>
   <script src="js/script.js"></script>
 </body>
 </html>
