@@ -1,48 +1,71 @@
 :root {
-  --bg: #121212;
-  --surface: #1e1e1e;
-  --surface-light: #2a2a2a;
-  --text: #e0e0e0;
+  --bg: #1a1a1a;
+  --section-bg: #242424;
+  --text: #f5f5f5;
   --accent: #e60012;
+  --soft: #444;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-.container { max-width: 1200px; margin: auto; padding: 0 1rem; }
-a { text-decoration: none; }
-.header { background: var(--surface); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-.logo { color: var(--accent); font-size: 1.75rem; font-weight: bold; }
-.nav-links { list-style: none; display: flex; gap: 1.5rem; }
-.nav-links a { color: var(--text); transition: color 0.3s; }
-.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+a { color: var(--text); text-decoration: none; }
 
-/* Buttons */
-.btn-primary { display: inline-block; padding: 0.75rem 1.5rem; background: var(--accent); color: #fff; border-radius: 0.5rem; transition: background 0.3s; }
-.btn-primary:hover { background: #b3000f; }
-
-/* Cards */
-.card { background: var(--surface-light); border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.7); transition: transform 0.3s; }
-.card:hover { transform: translateY(-5px); }
-.card img { width: 100%; display: block; }
-.card h2, .card h3, .card h4 { color: var(--accent); margin: 1rem; }
-.card p, .card span { margin: 0 1rem 1rem; }
+/* Header */
+.site-header { background: var(--section-bg); position: sticky; top: 0; z-index: 100; }
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+.nav-list { display: flex; gap: 1.5rem; list-style: none; }
+.nav-list a { padding: 0.25rem 0; transition: border-bottom 0.3s; }
+.nav-list a.active, .nav-list a:hover { border-bottom: 2px solid var(--accent); }
 
 /* Hero */
-.hero { background: url('../assets/images/hero-bg.jpg') center/cover no-repeat; padding: 4rem 0; }
-.hero-card { background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 1rem; text-align: center; }
-.hero-card h1 { color: #fff; margin-bottom: 1rem; }
-.hero-card p { color: #ddd; margin-bottom: 1.5rem; }
+.hero { background-size: cover; background-position: center; padding: 4rem 0; text-align: center; }
+.hero h1 { margin-bottom: 1rem; font-size: 2.5rem; }
+.hero p { margin-bottom: 1.5rem; font-size: 1.125rem; }
+.btn-cta { background: var(--accent); color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; transition: opacity 0.3s; }
+.btn-cta:hover { opacity: 0.8; }
 
-/* Grid Layouts */
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-.promo-grid { display: grid; grid-auto-flow: column; grid-auto-columns: 300px; gap: 1rem; overflow-x: auto; padding-bottom: 1rem; }
+/* Sections */
+section { padding: 2rem 0; background: var(--section-bg); }
+section:nth-of-type(even) { background: var(--bg); }
+h2 { color: var(--accent); margin-bottom: 1rem; text-align: center; }
+
+/* About */
+.about-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
+.about-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); }
+.about-text { flex: 1; }
+
+/* Promo Slider */
+.promo-slider { display: flex; gap: 1rem; overflow-x: auto; }
+.promo-slider img { width: 100%; max-width: 300px; border-radius: 0.5rem; }
+
+/* Featured Cars */
+.car-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; list-style: none; padding: 0; }
+.car-list img { width: 100%; border-radius: 0.5rem; }
+.car-info { margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: center; }
+.car-info h3 { margin: 0; font-size: 1.125rem; }
+.car-info span { color: var(--soft); }
+
+/* Testimonials */
+.testi-container { max-width: 800px; margin: auto; display: grid; gap: 1.5rem; }
+.testi-container blockquote { margin: 0; font-style: italic; position: relative; padding-left: 1.5rem; }
+.testi-container blockquote::before { content: "\201C"; font-size: 2rem; position: absolute; left: 0; top: -0.25rem; color: var(--accent); }
+.testi-container cite { display: block; text-align: right; font-size: 0.9rem; color: var(--soft); }
 
 /* Footer */
-.footer { background: var(--surface); padding: 3rem 0 1rem; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-.footer-card { padding: 1.5rem; }
-.footer-map-card iframe { width: 100%; height: 150px; border: 0; border-radius: 0.5rem; }
-.footer-copy { text-align: center; margin-top: 1.5rem; color: #888; font-size: 0.9rem; }
+.site-footer { background: var(--section-bg); padding: 2rem 0; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 1rem; }
+.footer-section h4 { margin-bottom: 0.5rem; color: var(--accent); }
+.social-list { list-style: none; padding: 0; display: flex; gap: 1rem; }
+.social-list a { color: var(--soft); }
+.footer-copy { text-align: center; font-size: 0.85rem; color: var(--soft); }
 
-/* WhatsApp Button */
+/* WhatsApp Float */
 .whatsapp-float { position: fixed; bottom: 1rem; right: 1rem; width: 3.5rem; height: 3.5rem; }
+
+/* Responsive */
+@media(max-width:768px) {
+  .about-wrapper { flex-direction: column; text-align: center; }
+  .car-info { flex-direction: column; align-items: flex-start; }
+  .nav-list { gap: 1rem; }
+}
