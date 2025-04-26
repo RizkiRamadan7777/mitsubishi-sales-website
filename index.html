@@ -1,71 +1,132 @@
-:root {
-  --bg: #1a1a1a;
-  --section-bg: #242424;
-  --text: #f5f5f5;
-  --accent: #e60012;
-  --soft: #444;
-}
-*, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-a { color: var(--text); text-decoration: none; }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitsubishi Sales - Lisa Suryani Purba</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">Mitsubishi Motors</a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="simulasi.html">Simulasi Cicilan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-/* Header */
-.site-header { background: var(--section-bg); position: sticky; top: 0; z-index: 100; }
-.nav-wrapper { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
-.nav-list { display: flex; gap: 1.5rem; list-style: none; }
-.nav-list a { padding: 0.25rem 0; transition: border-bottom 0.3s; }
-.nav-list a.active, .nav-list a:hover { border-bottom: 2px solid var(--accent); }
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('assets/images/hero-bg.jpg')">
+    <div class="container">
+      <h1>Selamat Datang di Mitsubishi Jambi</h1>
+      <p>Layanan profesional oleh <strong>Lisa Suryani Purba</strong>. Temukan mobil impian Anda sekarang.</p>
+      <a href="https://wa.me/6282173541831" class="btn-cta">Hubungi via WhatsApp</a>
+    </div>
+  </section>
 
-/* Hero */
-.hero { background-size: cover; background-position: center; padding: 4rem 0; text-align: center; }
-.hero h1 { margin-bottom: 1rem; font-size: 2.5rem; }
-.hero p { margin-bottom: 1.5rem; font-size: 1.125rem; }
-.btn-cta { background: var(--accent); color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; transition: opacity 0.3s; }
-.btn-cta:hover { opacity: 0.8; }
+  <!-- About Section -->
+  <section class="about">
+    <div class="container about-wrapper">
+      <img src="assets/images/lisa.jpg" alt="Lisa Suryani Purba" class="about-photo">
+      <div class="about-text">
+        <h2>Tentang Saya</h2>
+        <p>Halo! Saya <strong>Lisa Suryani Purba</strong>, Sales Counter Mitsubishi dengan 5+ tahun pengalaman. Saya siap membantu Anda memilih unit terbaik sesuai kebutuhan dan budget.</p>
+      </div>
+    </div>
+  </section>
 
-/* Sections */
-section { padding: 2rem 0; background: var(--section-bg); }
-section:nth-of-type(even) { background: var(--bg); }
-h2 { color: var(--accent); margin-bottom: 1rem; text-align: center; }
+  <!-- Promo Section -->
+  <section class="promo">
+    <div class="container">
+      <h2>Promo Terbaru</h2>
+      <div class="promo-slider">
+        <img src="assets/images/promo1.jpg" alt="Promo 1">
+        <img src="assets/images/promo2.jpg" alt="Promo 2">
+        <img src="assets/images/promo3.jpg" alt="Promo 3">
+      </div>
+    </div>
+  </section>
 
-/* About */
-.about-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
-.about-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); }
-.about-text { flex: 1; }
+  <!-- Featured Cars -->
+  <section class="featured">
+    <div class="container">
+      <h2>Produk Unggulan</h2>
+      <ul class="car-list">
+        <li>
+          <img src="assets/images/suv1.jpg" alt="Model X">
+          <div class="car-info">
+            <h3>Model X</h3>
+            <span>Rp 500.000.000</span>
+          </div>
+        </li>
+        <li>
+          <img src="assets/images/sedan1.jpg" alt="Model Y">
+          <div class="car-info">
+            <h3>Model Y</h3>
+            <span>Rp 450.000.000</span>
+          </div>
+        </li>
+        <li>
+          <img src="assets/images/truck1.jpg" alt="Model Z">
+          <div class="car-info">
+            <h3>Model Z</h3>
+            <span>Rp 600.000.000</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-/* Promo Slider */
-.promo-slider { display: flex; gap: 1rem; overflow-x: auto; }
-.promo-slider img { width: 100%; max-width: 300px; border-radius: 0.5rem; }
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>Apa Kata Pelanggan</h2>
+      <div class="testi-container">
+        <blockquote>“Pelayanan cepat dan profesional!”</blockquote>
+        <cite>- Andi, Jambi</cite>
 
-/* Featured Cars */
-.car-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; list-style: none; padding: 0; }
-.car-list img { width: 100%; border-radius: 0.5rem; }
-.car-info { margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: center; }
-.car-info h3 { margin: 0; font-size: 1.125rem; }
-.car-info span { color: var(--soft); }
+        <blockquote>“Harga terbaik dan support luar biasa.”</blockquote>
+        <cite>- Budi, Jambi</cite>
 
-/* Testimonials */
-.testi-container { max-width: 800px; margin: auto; display: grid; gap: 1.5rem; }
-.testi-container blockquote { margin: 0; font-style: italic; position: relative; padding-left: 1.5rem; }
-.testi-container blockquote::before { content: "\201C"; font-size: 2rem; position: absolute; left: 0; top: -0.25rem; color: var(--accent); }
-.testi-container cite { display: block; text-align: right; font-size: 0.9rem; color: var(--soft); }
+        <blockquote>“Sangat dianjurkan untuk beli di sini.”</blockquote>
+        <cite>- Citra, Palembang</cite>
+      </div>
+    </div>
+  </section>
 
-/* Footer */
-.site-footer { background: var(--section-bg); padding: 2rem 0; }
-.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 1rem; }
-.footer-section h4 { margin-bottom: 0.5rem; color: var(--accent); }
-.social-list { list-style: none; padding: 0; display: flex; gap: 1rem; }
-.social-list a { color: var(--soft); }
-.footer-copy { text-align: center; font-size: 0.85rem; color: var(--soft); }
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <p>Lisa Suryani Purba</p>
+        <p>WA: <a href="https://wa.me/6282173541831">+62 821-7354-1831</a></p>
+        <p>Email: <a href="mailto:info@mitsubishijambi.com">info@mitsubishijambi.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Lokasi</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="200" height="150" loading="lazy"></iframe>
+      </div>
+      <div class="footer-section">
+        <h4>Media Sosial</h4>
+        <ul class="social-list">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 Mitsubishi Sales Jambi. All rights reserved.</p>
+  </footer>
 
-/* WhatsApp Float */
-.whatsapp-float { position: fixed; bottom: 1rem; right: 1rem; width: 3.5rem; height: 3.5rem; }
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/6282173541831" class="whatsapp-float"><img src="assets/whatsapp-icon.png" alt="WhatsApp"></a>
 
-/* Responsive */
-@media(max-width:768px) {
-  .about-wrapper { flex-direction: column; text-align: center; }
-  .car-info { flex-direction: column; align-items: flex-start; }
-  .nav-list { gap: 1rem; }
-}
+  <script src="js/script.js"></script>
+</body>
+</html>
