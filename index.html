@@ -1,127 +1,71 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mitsubishi Sales - Lisa Suryani Purba</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">Mitsubishi Motors</a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Beranda</a></li>
-          <li><a href="produk.html">Produk</a></li>
-          <li><a href="simulasi.html">Simulasi Cicilan</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+:root {
+  --bg: #1a1a1a;
+  --section-bg: #242424;
+  --text: #f5f5f5;
+  --accent: #e60012;
+  --soft: #444;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+a { color: var(--text); text-decoration: none; }
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <h1>Selamat Datang di Mitsubishi Sales Jambi</h1>
-          <p>Layanan premium oleh <strong>Lisa Suryani Purba</strong> untuk membantu Anda memiliki mobil impian.</p>
-          <a href="https://wa.me/6282173541831" class="btn-primary">Chat via WhatsApp</a>
-        </div>
-      </div>
-    </section>
+/* Header */
+.site-header { background: var(--section-bg); position: sticky; top: 0; z-index: 100; }
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+.nav-list { display: flex; gap: 1.5rem; list-style: none; }
+.nav-list a { padding: 0.25rem 0; transition: border-bottom 0.3s; }
+.nav-list a.active, .nav-list a:hover { border-bottom: 2px solid var(--accent); }
 
-    <!-- About Me -->
-    <section class="about-me">
-      <div class="container card-grid">
-        <div class="card about-card">
-          <img src="assets/images/lisa.jpg" alt="Lisa Suryani Purba">
-          <h2>Tentang Saya</h2>
-          <p>Halo, saya <strong>Lisa Suryani Purba</strong>, Sales Counter Mitsubishi dengan pengalaman 5+ tahun. Saya membantu Anda memilih mobil sesuai kebutuhan dan budget.</p>
-        </div>
-      </div>
-    </section>
+/* Hero */
+.hero { background-size: cover; background-position: center; padding: 4rem 0; text-align: center; }
+.hero h1 { margin-bottom: 1rem; font-size: 2.5rem; }
+.hero p { margin-bottom: 1.5rem; font-size: 1.125rem; }
+.btn-cta { background: var(--accent); color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; transition: opacity 0.3s; }
+.btn-cta:hover { opacity: 0.8; }
 
-    <!-- Promo Slider -->
-    <section class="promo">
-      <div class="container">
-        <h2>Promo Terbaru</h2>
-        <div class="promo-grid">
-          <div class="card promo-card"><img src="assets/images/promo1.jpg" alt="Promo 1"></div>
-          <div class="card promo-card"><img src="assets/images/promo2.jpg" alt="Promo 2"></div>
-          <div class="card promo-card"><img src="assets/images/promo3.jpg" alt="Promo 3"></div>
-        </div>
-      </div>
-    </section>
+/* Sections */
+section { padding: 2rem 0; background: var(--section-bg); }
+section:nth-of-type(even) { background: var(--bg); }
+h2 { color: var(--accent); margin-bottom: 1rem; text-align: center; }
 
-    <!-- Featured Products -->
-    <section class="featured-products">
-      <div class="container">
-        <h2>Produk Unggulan</h2>
-        <div class="card-grid">
-          <div class="card product-card">
-            <img src="assets/images/suv1.jpg" alt="Model X">
-            <h3>Model X</h3>
-            <p>Rp 500.000.000</p>
-          </div>
-          <div class="card product-card">
-            <img src="assets/images/sedan1.jpg" alt="Model Y">
-            <h3>Model Y</h3>
-            <p>Rp 450.000.000</p>
-          </div>
-          <div class="card product-card">
-            <img src="assets/images/truck1.jpg" alt="Model Z">
-            <h3>Model Z</h3>
-            <p>Rp 600.000.000</p>
-          </div>
-        </div>
-      </div>
-    </section>
+/* About */
+.about-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
+.about-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); }
+.about-text { flex: 1; }
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-      <div class="container">
-        <h2>Testimoni Pelanggan</h2>
-        <div class="card-grid">
-          <div class="card testi-card">
-            <p>“Pelayanan cepat dan profesional!”</p>
-            <span>- Andi, Jambi</span>
-          </div>
-          <div class="card testi-card">
-            <p>“Harga terbaik dan support luar biasa.”</p>
-            <span>- Budi, Jambi</span>
-          </div>
-          <div class="card testi-card">
-            <p>“Sangat dianjurkan untuk beli di sini.”</p>
-            <span>- Citra, Palembang</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+/* Promo Slider */
+.promo-slider { display: flex; gap: 1rem; overflow-x: auto; }
+.promo-slider img { width: 100%; max-width: 300px; border-radius: 0.5rem; }
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="card footer-card">
-        <h4>Kontak</h4>
-        <p>Lisa Suryani Purba</p>
-        <p>WA: <a href="https://wa.me/6282173541831">+62 821-7354-1831</a></p>
-        <p>Email: <a href="mailto:info@mitsubishijambi.com">info@mitsubishijambi.com</a></p>
-      </div>
-      <div class="card footer-card">
-        <h4>Media Sosial</h4>
-        <p><a href="#">Facebook</a> | <a href="#">Instagram</a></p>
-      </div>
-      <div class="card footer-card footer-map-card">
-        <h4>Lokasi Showroom</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-    <p class="footer-copy">&copy; 2025 Mitsubishi Sales Jambi. All rights reserved.</p>
-  </footer>
+/* Featured Cars */
+.car-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; list-style: none; padding: 0; }
+.car-list img { width: 100%; border-radius: 0.5rem; }
+.car-info { margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: center; }
+.car-info h3 { margin: 0; font-size: 1.125rem; }
+.car-info span { color: var(--soft); }
 
-  <a href="https://wa.me/6282173541831" class="whatsapp-float"><img src="assets/whatsapp-icon.png" alt="WhatsApp"></a>
-  <script src="js/script.js"></script>
-</body>
-</html>
+/* Testimonials */
+.testi-container { max-width: 800px; margin: auto; display: grid; gap: 1.5rem; }
+.testi-container blockquote { margin: 0; font-style: italic; position: relative; padding-left: 1.5rem; }
+.testi-container blockquote::before { content: "\201C"; font-size: 2rem; position: absolute; left: 0; top: -0.25rem; color: var(--accent); }
+.testi-container cite { display: block; text-align: right; font-size: 0.9rem; color: var(--soft); }
+
+/* Footer */
+.site-footer { background: var(--section-bg); padding: 2rem 0; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 1rem; }
+.footer-section h4 { margin-bottom: 0.5rem; color: var(--accent); }
+.social-list { list-style: none; padding: 0; display: flex; gap: 1rem; }
+.social-list a { color: var(--soft); }
+.footer-copy { text-align: center; font-size: 0.85rem; color: var(--soft); }
+
+/* WhatsApp Float */
+.whatsapp-float { position: fixed; bottom: 1rem; right: 1rem; width: 3.5rem; height: 3.5rem; }
+
+/* Responsive */
+@media(max-width:768px) {
+  .about-wrapper { flex-direction: column; text-align: center; }
+  .car-info { flex-direction: column; align-items: flex-start; }
+  .nav-list { gap: 1rem; }
+}
