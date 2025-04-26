@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi Jambi - Dealer Resmi | Lisa Suryani Purba</title>
+    <meta name="description" content="Dealer Resmi Mitsubishi Jambi - Dapatkan Mobil Mitsubishi Terbaru dengan Harga OTR Terbaik dan Promo Menarik">
+    
+    <!-- Preload Resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- SEO Meta -->
+    <meta property="og:image" content="img/og-image.jpg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CarDealer",
+        "name": "Mitsubishi Jambi",
+        "image": "img/logo-mitsubishi.png",
+        "telephone": "+6282173541831",
+        "priceRange": "Rp200jt - Rp1M",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jambi",
+            "addressRegion": "Jambi",
+            "postalCode": "36100",
+            "streetAddress": "Jl. Sudirman No. 123"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- 3D Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Memuat Konten...</p>
+    </div>
+
+    <!-- AR Prompt -->
+    <div class="ar-prompt">
+        <button class="ar-btn" onclick="launchAR()">
+            <img src="img/ar-icon.svg" alt="AR Icon">
+            Lihat dalam AR
+        </button>
+    </div>
+
+    <!-- Dynamic Navbar -->
+    <header class="smart-nav">
+        <div class="nav-container">
+            <!-- Logo dengan Lottie Animation -->
+            <div class="logo" id="lottie-logo"></div>
+            
+            <!-- AI Chat Assistant -->
+            <div class="ai-assistant">
+                <div class="ai-icon">🤖</div>
+                <div class="ai-chat">
+                    <p>Ada yang bisa saya bantu?</p>
+                    <input type="text" placeholder="Tanya tentang mobil...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Immersive Hero Section -->
+    <section class="webgl-hero" id="webgl-container">
+        <div class="hero-content">
+            <h1 class="hologram-text">New Xpander <span>Black Edition</span></h1>
+            <div class="hero-cta">
+                <button class="cta-hover" data-hover="🚀 DAPATKAN SEKARANG!">
+                    <span>TEST DRIVE</span>
+                </button>
+                <button class="cta-hover" data-hover="💸 SIMULASI KREDIT!">
+                    <span>PROMO HARI INI</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Product Recommender -->
+    <section class="ai-recommendation">
+        <div class="ai-container">
+            <h2>Temukan Mobil Perfect Anda</h2>
+            <div class="ai-quiz">
+                <div class="ai-step active" data-step="1">
+                    <p>Apa kebutuhan utama Anda?</p>
+                    <div class="ai-options">
+                        <button data-answer="family">Keluarga</button>
+                        <button data-answer="business">Bisnis</button>
+                        <button data-answer="luxury">Luxury</button>
+                    </div>
+                </div>
+                <!-- Langkah selanjutnya -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive 3D Showroom -->
+    <section class="virtual-showroom">
+        <div class="showroom-controls">
+            <button class="control-btn" onclick="rotateCar('left')">↻</button>
+            <button class="control-btn" onclick="rotateCar('right')">↺</button>
+        </div>
+        <div id="3d-car-container"></div>
+        <div class="customization-panel">
+            <div class="color-picker">
+                <input type="color" id="car-color" onchange="changeCarColor(this.value)">
+            </div>
+            <div class="wheel-options"></div>
+        </div>
+    </section>
+
+    <!-- Real-time Credit Calculator -->
+    <section class="floating-calculator">
+        <div class="calc-container">
+            <h3>Simulasi Kredit Real-time</h3>
+            <div class="calc-inputs">
+                <input type="range" id="harga" min="200000000" max="1000000000" step="10000000">
+                <input type="range" id="tenor" min="12" max="60" step="12">
+                <output id="hasil-cicilan"></output>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="proof-grid">
+            <div class="proof-item">
+                <div class="proof-number">500+</div>
+                <div class="proof-text">Mobil Terjual</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">98%</div>
+                <div class="proof-text">Kepuasan Pelanggan</div>
+            </div>
+            <div class="proof-item">
+                <img src="img/mitsubishi-certified.png" alt="Certified">
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <div class="dealer-map" id="map-3d">
+        <div class="map-overlay">
+            <h3>Kunjungi Dealer Kami</h3>
+            <div class="map-info">
+                <p>🕒 Buka Setiap Hari 08.00 - 17.00 WIB</p>
+                <button class="navigation-btn" onclick="openNavigation()">
+                    Dapatkan Petunjuk Arah
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next-gen Footer -->
+    <footer class="smart-footer">
+        <div class="footer-grid">
+            <div class="newsletter">
+                <h4>Dapatkan Update Promo</h4>
+                <input type="email" placeholder="Masukkan email Anda">
+                <button>Subscribe</button>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-3d">Facebook</a>
+                <a href="#" class="social-3d">Instagram</a>
+                <a href="#" class="social-3d">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WebGL Libraries -->
+    <script src="js/three.min.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/gsap.min.js"></script>
+    
+    <!-- Main App -->
+    <script src="js/main.js"></script>
+    
+    <!-- Lottie Animation -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>
