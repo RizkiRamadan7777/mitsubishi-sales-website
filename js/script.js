@@ -1,29 +1,23 @@
+// File: js/script.js
+
+// Toggle mobile nav
+const toggleBtn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
+toggleBtn?.addEventListener('click', ()=> nav.classList.toggle('active'));
+
 // Simulasi Cicilan
-const form = document.getElementById('loan-form');
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const price = parseFloat(document.getElementById('price').value);
-    const dpPct = parseFloat(document.getElementById('dp').value);
-    const ratePct = parseFloat(document.getElementById('rate').value);
-    const term = parseInt(document.getElementById('term').value);
-    const dpAmount = price * (dpPct / 100);
-    const principal = price - dpAmount;
-    const monthlyRate = ratePct / 100 / 12;
-    const payment = (principal * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -term));
-    document.getElementById('result').innerText =
-      `Cicilan per bulan: Rp ${payment.toLocaleString('id-ID', { maximumFractionDigits: 0 })}`;
-  });
-}
-// Basic Hero Slider
-let idx=0;const slides=document.querySelectorAll('#main-slider .slide');
-setInterval(()=>{slides[idx].parentNode.style.transform=`translateX(-${++idx%slides.length*100}%)`},5000);
-// Filter Produk
-const filterBtns = document.querySelectorAll('.filter-btn');
-const productItems = document.querySelectorAll('.product-item');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const cat = btn.dataset.cat;
-    productItems.forEach(item => item.style.display = (cat === 'all' || item.classList.contains(cat)) ? 'block' : 'none');
-  });
+const form = document.getElementById('form-simulasi');
+form?.addEventListener('submit', e => {
+  e.preventDefault();
+  const harga = parseFloat(document.getElementById('harga').value);
+  const dpPct = parseFloat(document.getElementById('dp').value) / 100;
+  const bunga = parseFloat(document.getElementById('bunga').value) / 100;
+  const tenor = parseInt(document.getElementById('tenor').value);
+  const dpAmt = harga * dpPct;
+  const pokok = harga - dpAmt;
+  // bunga sederhana
+  const totalBayar = pokok * (1 + bunga * tenor);
+  const cicilan = totalBayar / (tenor * 12);
+  document.getElementById('hasil').innerText =
+    `Estimasi cicilan: Rp ${cicilan.toLocaleString('id-ID')} / bulan`;
 });
