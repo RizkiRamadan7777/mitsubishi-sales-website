@@ -15,7 +15,9 @@ if (form) {
       `Cicilan per bulan: Rp ${payment.toLocaleString('id-ID', { maximumFractionDigits: 0 })}`;
   });
 }
-
+// Basic Hero Slider
+let idx=0;const slides=document.querySelectorAll('#main-slider .slide');
+setInterval(()=>{slides[idx].parentNode.style.transform=`translateX(-${++idx%slides.length*100}%)`},5000);
 // Filter Produk
 const filterBtns = document.querySelectorAll('.filter-btn');
 const productItems = document.querySelectorAll('.product-item');
