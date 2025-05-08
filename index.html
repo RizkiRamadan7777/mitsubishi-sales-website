@@ -1,57 +1,77 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Saya</title>
-  <!-- Tailwind Play CDN -->
+  <title>Portfolio Sales Mitsubishi</title>
+  <!-- Tailwind Play CDN with custom theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mitsubishiRed: '#E60012',
+            mitsubishiBlack: '#000000',
+            mitsubishiSilver: '#CCCCCC',
+          }
+        }
+      }
+    };
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Heroicons -->
 </head>
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
   <!-- Header -->
-  <header class="flex justify-between items-center p-6">
-    <h1 class="text-3xl font-bold">Nama Anda</h1>
+  <header class="bg-mitsubishiRed text-white p-6 flex justify-between items-center">
+    <h1 class="text-3xl font-bold">Nama Anda - Sales Mitsubishi</h1>
     <button id="theme-toggle" class="text-xl">🌙/☀️</button>
   </header>
 
+  <!-- Hero Section with Car Image -->
+  <section id="hero" class="relative w-full h-64 md:h-96">
+    <img src="assets/profile.jpg" alt="Mitsubishi Car" class="object-cover w-full h-full brightness-90" />
+    <div class="absolute inset-0 bg-black bg-opacity-25 flex items-center justify-center">
+      <h2 class="text-4xl md:text-6xl text-white font-semibold">Drive Your Ambition</h2>
+    </div>
+  </section>
+
   <!-- About Me -->
   <section id="about" class="max-w-3xl mx-auto py-12 px-6">
-    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-    <p>
-      Halo! Saya [Nama Anda], seorang [profesi/keahlian]. Saya suka membangun
-      aplikasi web yang modern, responsif, dan user-friendly.
-    </p>
+    <h2 class="text-2xl font-semibold mb-4 text-mitsubishiRed">About Me</h2>
+    <p>Saya [Nama Anda], Sales Mitsubishi dengan pengalaman lebih dari X tahun. Saya membantu pelanggan menemukan kendaraan impian mereka dengan layanan profesional dan solusi pembiayaan terbaik.</p>
   </section>
 
   <!-- Social Links -->
   <section id="social" class="flex justify-center space-x-6 py-6">
     <!-- GitHub -->
-    <a href="https://github.com/username" target="_blank" aria-label="GitHub">
+    <a href="#" target="_blank" aria-label="GitHub">
+      <!-- GitHub SVG -->
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-        <!-- SVG path here (Heroicon GitHub) -->
+        <path d="..." />
       </svg>
     </a>
     <!-- LinkedIn -->
-    <a href="https://linkedin.com/in/username" target="_blank" aria-label="LinkedIn">
+    <a href="#" target="_blank" aria-label="LinkedIn">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-        <!-- SVG path here -->
+        <path d="..." />
       </svg>
     </a>
-    <!-- Twitter -->
-    <a href="https://twitter.com/username" target="_blank" aria-label="Twitter">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-        <!-- SVG path here -->
+    <!-- WhatsApp -->
+    <a href="https://wa.me/628123456789?text=Halo%20Saya%20tertarik%20dengan%20Mitsubishi" target="_blank" aria-label="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:scale-110 transition-transform text-green-500" fill="currentColor" viewBox="0 0 24 24">
+        <path d="..." />
       </svg>
     </a>
   </section>
 
   <!-- Fixed WA Chat Button -->
-  <a href="https://wa.me/628123456789?text=Halo%20!" 
-     class="fixed bottom-6 right-6 p-4 rounded-full shadow-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+  <a href="https://wa.me/628123456789?text=Halo%20Saya%20tertarik%20dengan%20Mitsubishi" 
+     class="fixed bottom-6 right-6 p-4 rounded-full shadow-lg bg-mitsubishiRed text-white hover:bg-[#cc000f] transition-colors"
      aria-label="Chat WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24">
-      <!-- WhatsApp SVG icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24">
+      <path d="..." />
     </svg>
     Chat WA
   </a>
