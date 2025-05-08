@@ -1,144 +1,61 @@
-<!-- File: index.html -->
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beranda • Mitsubishi Sales Lisa Suryani Purba</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Saya</title>
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Heroicons -->
 </head>
-<body>
-  <!-- Header & Navigation -->
-  <header>
-    <div class="container header-inner">
-      <a href="index.html" class="logo">Mitsubishi</a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="produk.html">Produk</a></li>
-          <li><a href="simulasi.html">Simulasi Cicilan</a></li>
-        </ul>
-        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-      </nav>
-    </div>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6">
+    <h1 class="text-3xl font-bold">Nama Anda</h1>
+    <button id="theme-toggle" class="text-xl">🌙/☀️</button>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <h1>Solusi Mobil Mitsubishi Terbaik di Jambi</h1>
-        <p>Dapatkan promo eksklusif, cicilan ringan, dan layanan personal oleh Lisa Suryani Purba.</p>
-        <a href="https://wa.me/6282173541831" class="btn btn-red" target="_blank">Chat via WhatsApp</a>
-      </div>
-    </section>
+  <!-- About Me -->
+  <section id="about" class="max-w-3xl mx-auto py-12 px-6">
+    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <p>
+      Halo! Saya [Nama Anda], seorang [profesi/keahlian]. Saya suka membangun
+      aplikasi web yang modern, responsif, dan user-friendly.
+    </p>
+  </section>
 
-    <!-- Promo Section -->
-    <section class="promo">
-      <div class="container">
-        <h2>Promo Terbaru</h2>
-        <div class="promo-grid">
-          <div class="card">
-            <img src="images/promo1.jpg" alt="Diskon Akhir Tahun">
-            <h3>Diskon Akhir Tahun</h3>
-            <p>Potongan sampai 15 juta untuk pembelian Xpander.</p>
-          </div>
-          <div class="card">
-            <img src="images/promo2.jpg" alt="Bunga 0%">
-            <h3>Bunga 0%</h3>
-            <p>Tenor 1 tahun bunga 0% untuk Pajero Sport.</p>
-          </div>
-          <div class="card">
-            <img src="images/promo3.jpg" alt="DP Ringan">
-            <h3>DP Mulai 10%</h3>
-            <p>DP super ringan untuk semua varian Triton.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Social Links -->
+  <section id="social" class="flex justify-center space-x-6 py-6">
+    <!-- GitHub -->
+    <a href="https://github.com/username" target="_blank" aria-label="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+        <!-- SVG path here (Heroicon GitHub) -->
+      </svg>
+    </a>
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/username" target="_blank" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+        <!-- SVG path here -->
+      </svg>
+    </a>
+    <!-- Twitter -->
+    <a href="https://twitter.com/username" target="_blank" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+        <!-- SVG path here -->
+      </svg>
+    </a>
+  </section>
 
-    <!-- Featured Products -->
-    <section class="featured">
-      <div class="container">
-        <h2>Produk Unggulan</h2>
-        <div class="product-grid">
-          <div class="card">
-            <img src="images/xpander.jpg" alt="Mitsubishi Xpander">
-            <h3>Mitsubishi Xpander</h3>
-            <p>Harga OTR Jambi: Rp 285.000.000</p>
-            <a href="https://wa.me/6282173541831" class="btn btn-outline">Info & Chat</a>
-          </div>
-          <div class="card">
-            <img src="images/pajero.jpg" alt="Mitsubishi Pajero Sport">
-            <h3>Pajero Sport</h3>
-            <p>Harga OTR Jambi: Rp 600.000.000</p>
-            <a href="https://wa.me/6282173541831" class="btn btn-outline">Info & Chat</a>
-          </div>
-          <div class="card">
-            <img src="images/triton.jpg" alt="Mitsubishi Triton">
-            <h3>Triton</h3>
-            <p>Harga OTR Jambi: Rp 450.000.000</p>
-            <a href="https://wa.me/6282173541831" class="btn btn-outline">Info & Chat</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-      <div class="container">
-        <h2>Testimoni Pelanggan</h2>
-        <div class="testi-grid">
-          <div class="testi-card">
-            <p>\"Proses cepat, DP ringan, dan layanan Lisa sangat ramah!\"</p>
-            <h4>— Budi, Jambi</h4>
-          </div>
-          <div class="testi-card">
-            <p>\"Promo bunga 0% benar-benar membantu saya membeli Pajero Sport.\"</p>
-            <h4>— Sari, Jambi</h4>
-          </div>
-          <div class="testi-card">
-            <p>\"Info lengkap via WhatsApp, recommended banget!\"</p>
-            <h4>— Agus, Jambi</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/6282173541831" class="whatsapp-chat" target="_blank" aria-label="Chat WA">
-    <img src="images/whatsapp-icon.svg" alt="WA">
+  <!-- Fixed WA Chat Button -->
+  <a href="https://wa.me/628123456789?text=Halo%20!" 
+     class="fixed bottom-6 right-6 p-4 rounded-full shadow-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+     aria-label="Chat WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24">
+      <!-- WhatsApp SVG icon -->
+    </svg>
+    Chat WA
   </a>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-container">
-      <div class="footer-info">
-        <h4>Kontak Sales</h4>
-        <p>Lisa Suryani Purba</p>
-        <p>Sales Counter Mitsubishi</p>
-        <p>WA: <a href="https://wa.me/6282173541831" target="_blank">+62 821-7354-1831</a></p>
-      </div>
-      <div class="footer-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!..." 
-          width="200" height="150" style="border:0;" loading="lazy"></iframe>
-      </div>
-      <div class="footer-other">
-        <h4>Info Lain</h4>
-        <ul>
-          <li><a href="#">Tentang Kami</a></li>
-          <li><a href="#">Kebijakan Privasi</a></li>
-          <li><a href="#">Syarat & Ketentuan</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-credit">
-      &copy; 2025 Mitsubishi Motors. All rights reserved.
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
